@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  "Poppins", sans-serif;
+}
+
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(83, 75, 75, 0.61),rgba(54, 49, 49, 0.603)),url("bg.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,50%);
+}
+.text-box h1{
+    font-size: 62px;
+    color: #d1dbd6bb;
+}
+
+
+.logo{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 70px;
+}
+
+.box{
+  top: 50%;
+  flex-direction: column;
+  margin-left: 140px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --color-1: #163f2c;
+  --text-color: #f0f0f0;
+  --accent-color: #163f2c;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 12pt;
+  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+nav{
+    flex: 1;
+  height: 60px;
+  background-color: #163f2c;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 750px;
+}
+nav a{
+  height: 100%;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav svg{
+  fill: #fff;
+}
+#sidebar-active{
+  display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+}
+
+
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.branches{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.bcol{
+  flex-basis: 32%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.bcol img{
+width: 100%;  
+}
+
+.bcol img:hover{
+  width: 100%;
+}
+
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+}
+
+.layer:hover{
+  background: rgba(12, 37, 7, 0.623);
+}
+
+.layer h3{
+  width: 100%;
+  font-weight: 600;
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.layer:hover h3{
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  opacity: 1;
+}
+
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer h4{
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.icons.fa{
+  color: #163f2c;
+  margin: 0 12px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.bn{
+      display: inline-block;
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid #000000;
+      padding: 12px 34px;
+      font-size: 15px;
+      background: #000;
+      position: relative;
+      transition:  0.5s;
+  } 
+  .bn:hover{
+    border: 1px solid #fff;
+    background: #03301b;
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+@media(max-width: 450px){
+    .header{
+     min-height: 100vh;
+     width: 100%;
+    }
+    .text-box{
+     top: 15%;
+    }
+    .text-box h1{
+     font-size: 30px;
+    }
+ 
+   .logo{
+     margin-right: 65px;
+   }  
+   .links-container{
+     flex-direction: column;
+     align-items: flex-start;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     z-index: 10;
+     width: 300px;
+     background-color: var(--color-1);
+     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+     transition: 0.75s ease-out;
+   }
+   nav a{
+     box-sizing: border-box;
+     height: auto;
+     width: 100%;
+     padding: 20px 30px;
+     justify-content: flex-start;
+   }
+   .open-sidebar-button, .close-sidebar-button{
+     padding: 20px;
+     display: block;
+   }
+   #sidebar-active:checked ~ .links-container{
+     right: 0;
+   }
+   #sidebar-active:checked ~ #overlay{
+     height: 100%;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 9;
+   }
+   .footer h4{
+    font-size: 15px;
+  }
+  .footer{
+    padding: 10px 0;
+  }
+
+  .box{
+    flex-direction: row;
+  }
+  .box h1{
+    font-size: 30px;
+  }
+
+.row{
+  flex-direction: row;
+}
+
+}
